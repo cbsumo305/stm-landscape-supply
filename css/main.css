@@ -261,3 +261,97 @@ textarea {
   }
 }
 
+
+/* MY STUFF */
+
+/* MOBILE BASIC STYLES */
+
+html {
+    font-size: 16px;
+}
+
+body {
+  color: #707070;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+h3 {
+    font-size: 1.125em;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+.flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* MOBILE PROMO */
+
+.promo-banner {
+  background: #E9E3D9;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* MOBILE HEADER */
+
+.menu-lg-screen {
+    display: none;
+}
+
+.collapsed {
+    display:none ;
+}
+
+
+/* MOBILE STAFF */
+
+.staff-bios {
+    flex-wrap: wrap;
+}
+
+
+/*MOBILE PRODUCTS*/
+
+.product-cat {
+    
+}
+
+
+
+/* TABLET */
+@media only screen and (min-width: 768px) {
+  .menu-lg-screen {
+    display: initial;
+  }
+
+  .menu-small-screen {
+      display: none;
+  }
+}

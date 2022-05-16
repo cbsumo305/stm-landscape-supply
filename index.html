@@ -19,13 +19,472 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat&display=swap" rel="stylesheet">
+
   <meta name="theme-color" content="#fafafa">
+  <script src="https://kit.fontawesome.com/d75254161e.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
+  <div class="flex-col">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+    <div class="promo-banner">News! Announcements! Click here to see more info about the news!</div>
+
+    <header class="flex-row">
+
+      <div class="menu-lg-screen">
+        <div class="search-bar">search-bar</div>
+
+        <nav>
+          <ul class="flex-row">
+            <li><a href="#about">About</a></li>
+            <li><a href="#supplies">Supplies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="menu-small-screen">
+        <p class="small-menu-label">MENU</p>
+        <div class="collapsing-menu collapsed">
+          <nav>
+            <ul class="flex-col">
+              <li><a href="#about">About</a></li>
+              <li><a href="#supplies">Supplies</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-social flex-row">
+            <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+            <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+            <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <figure>
+          <img id="logo" alt="logo" />
+        </figure>
+      </div>
+      
+      <div class="menu-lg-screen">
+        <div class="header-contact">
+          251-555-5555 | email@email.com
+        </div>
+
+        <div class="header-social flex-row">
+          <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+          <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+          <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+        </div>
+      </div>
+
+      <div class="menu-small-screen flex-row">
+        <p><a href="mailto:customerservice@stmsupply.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></p>
+        <p><a href="tel:251-555-5555" target="_blank"><i class="fa-solid fa-phone"></i></a></p>
+        <p class="mobile-search-icon"><i class="fa-solid fa-magnifying-glass"></i></p>
+      </div>
+
+
+    </header>
+
+    <div class="mobile-search-bar menu-small-screen collapsed">
+      mobile search bar row
+    </div>
+
+    <main class="flex-col">
+      <section class="hero-area">
+        <h1>STM Landscape Supply</h1>
+        <p>Here are some things we'd like you to know about us.</p>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+      </section>
+
+      <section id="staff">
+        <h3>Staff</h3>
+
+        <div class="flex-row staff-bios">
+
+          <div class="bio-box">
+            <figure>
+              <img alt="staff img" />
+            </figure>
+            <p>
+              Name <br />
+              Title <br />
+              Phone <br />
+              Email
+            </p>
+            <p>writeup about this person and what they do.</p>
+          </div>
+
+          <div class="bio-box">
+            <figure>
+              <img alt="staff img" />
+            </figure>
+            <p>
+              Name <br />
+              Title <br />
+              Phone <br />
+              Email
+            </p>
+            <p>writeup about this person and what they do.</p>
+          </div>
+
+
+          <div class="bio-box">
+            <figure>
+              <img alt="staff img" />
+            </figure>
+            <p>
+              Name <br />
+              Title <br />
+              Phone <br />
+              Email
+            </p>
+            <p>writeup about this person and what they do.</p>
+          </div>
+
+
+          <div class="bio-box">
+            <figure>
+              <img alt="staff img" />
+            </figure>
+            <p>
+              Name <br />
+              Title <br />
+              Phone <br />
+              Email
+            </p>
+            <p>writeup about this person and what they do.</p>
+          </div>
+
+
+          <div class="bio-box">
+            <figure>
+              <img alt="staff img" />
+            </figure>
+            <p>
+              Name <br />
+              Title <br />
+              Phone <br />
+              Email
+            </p>
+            <p>writeup about this person and what they do.</p>
+          </div>
+
+
+        </div>
+      </section>
+
+      <section id="products">
+        <h2>Best Sellers</h2>
+        featured products carousel here
+
+        <div class="flex-row">
+          <h3>Supplies</h3>
+          <div class="view-options">
+            img view | list view
+          </div>
+        </div>
+        
+        <div class="flex-col products-box">
+          <div class="product-cat">
+            <h4>Category Name</h4>
+
+            <div class="product-gallery flex-col">
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="product-cat">
+            <h4>Category Name</h4>
+
+            <div class="product-gallery flex-col">
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+
+
+            </div>
+          </div>
+          <div class="product-cat">
+            <h4>Category Name</h4>
+
+            <div class="product-gallery flex-col">
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="product-cat">
+            <h4>Category Name</h4>
+
+            <div class="product-gallery flex-col">
+
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+            </div>
+          </div>
+          <div class="product-cat">
+            <h4>Category Name</h4>
+
+            <div class="product-gallery flex-col">
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="reviews">
+        <h3>Check out what they're saying about us!</h3>
+        <div>Reviews carousel</div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact us</h2>
+        <div class="contact-box flex-col">
+          <div class="physical-info">
+            <address>
+              address
+              address
+              phone
+            </address>
+
+            <div>map button</div>
+
+            <div>
+              Hours
+            </div>
+
+            <div>email button</div>
+
+            <div>
+              Social links
+            </div>
+            
+          </div>
+
+          <div class="quote-form">
+            Quote form here
+          </div>
+          
+        </div>
+
+        <div class="help-links flex-col">
+          <div class="help-link">Link!</div>
+          <div class="help-link">Link!</div>
+          <div class="help-link">Link!</div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="flex-col">
+      <div>
+        <h4>Subscribe!</h4>
+      </div>
+
+      <div class="footer-social flex-row">
+        <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+        <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+        <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+      </div>
+
+      <div class="copyright">
+        Copyright
+      </div>
+    </footer>
+
+
+  </div>
+  
+
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
@@ -35,7 +494,23 @@
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
+
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <script>
+    //collapsing mobile menu
+    $(".small-menu-label").click(function () {
+      $(".collapsing-menu").toggleClass("collapsed");
+    })
+
+    //collapsing search bar
+    $(".mobile-search-icon").click(function () {
+      $(".mobile-search-bar").toggleClass("collapsed");
+    })
+    
+  </script>
+
+
 </body>
 
 </html>
