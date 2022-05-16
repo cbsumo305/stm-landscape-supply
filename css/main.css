@@ -273,6 +273,15 @@ html {
 body {
   color: #707070;
   font-family: 'Montserrat', sans-serif;
+  background-image: url(/img/st-aug-irrigation.jpeg);
+  background-size: contain;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1 {
@@ -290,7 +299,21 @@ h3 {
 }
 
 h1, h2, h3, h4 {
+    margin: 0;
     text-align: center;
+}
+
+input[type=button] {
+  background: #9DBD91;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 10px;
+  text-transform: uppercase;
+}
+
+figure {
+    margin: 0;
 }
 
 .flex-col {
@@ -321,13 +344,52 @@ h1, h2, h3, h4 {
 
 /* MOBILE HEADER */
 
+header {
+    color: white;
+}
+
 .menu-lg-screen {
     display: none;
 }
 
 .collapsed {
-    display:none ;
+    display: none;
 }
+
+/* MOBILE HERO AREA */
+
+.hero-area {
+    /*bg color hex code = #E9E3D9*/
+/*  background-color: rgba(233, 227, 217, .8);
+*/
+  background-color: rgba(255,255,255,.6);
+  padding: 75px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-area p {
+    /*background: #E9E3D9;
+    width: 75%;
+    margin: auto;
+    padding: 25px 15px;*/
+    font-weight: bold;
+}
+
+/* MOBILE ABOUT */
+
+#about {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.about-content {
+    padding: 15px;
+}
+
+
 
 
 /* MOBILE STAFF */
@@ -336,14 +398,151 @@ h1, h2, h3, h4 {
     flex-wrap: wrap;
 }
 
+.bio-box {
+    box-sizing: border-box;
+    position: relative;
+    padding: 5px;
+    width: 75%;
+}
 
-/*MOBILE PRODUCTS*/
+.front-bio {
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    justify-content: start;
+}
 
-.product-cat {
-    
+.bio-box h3 {
+    font-family: 'Alfa Slab One';
+    font-size: 1em;
+    text-align: right;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.bio-box figure {
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+    margin-right: 10px;
+}
+
+.bio-box .bio-text {
+    width: 100%;
+}
+
+.bio-bg {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  background-color: #E9E3D9;
+  width: 90%;
+  height: 90%;
+  z-index: 0;
 }
 
 
+/*MOBILE PRODUCTS*/
+
+#products {
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.best-sellers {
+  box-sizing: border-box;
+  background: rgba(157, 189, 145,.76);
+  width: 100%;
+  padding: 15px;
+
+}
+
+
+.products-header {
+    padding: 15px 0 0 0;
+}
+
+.view-options {
+    
+}
+
+.products-box {
+    padding-bottom: 15px;
+}
+
+.product-cat {
+    cursor: pointer;
+    background: #E9E3D9;
+    width: 80%;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.product-gallery {
+    display: none;
+}
+
+/* REVIEWS */
+
+#reviews {
+    background: rgb(157, 189, 145);
+    width: 100%;
+    padding: 15px 0;
+}
+
+
+
+/* CONTACT */
+
+#contact {
+    background: white;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.physical-info, .quote-form {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 15px auto;
+    padding: 15px;
+    background: #E9E3D9;
+}
+
+.help-link {
+    background: #9DBD91;
+    width: 40%;
+    padding: 10px;
+    margin: 10px auto;
+    font-weight: bold;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    background: #9DBD91;
+    padding: 15px 0;
+    color: white;
+    font-size: .7em;
+    text-align: center;
+}
+
+.footer-social {
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.footer-social p {
+    width: 40px;
+    font-size: 30px;
+}
+
+.copyright {
+    
+}
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
@@ -353,5 +552,9 @@ h1, h2, h3, h4 {
 
   .menu-small-screen {
       display: none;
+  }
+
+  .product-gallery {
+      display: initial;
   }
 }
