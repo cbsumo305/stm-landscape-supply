@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>STM Landscape Supply</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,31 +29,32 @@
 </head>
 
 <body>
-  <div class="flex-col">
+  <div id="page-content" class="flex-col">
 
     <div class="promo-banner">News! Announcements! Click here to see more info about the news!</div>
 
     <header class="flex-row">
 
-      <div class="menu-lg-screen">
+      <div class="menu-content menu-lg-screen">
         <div class="search-bar">search-bar</div>
 
         <nav>
           <ul class="flex-row">
             <li><a href="#about">About</a></li>
-            <li><a href="#supplies">Supplies</a></li>
+            <li><a href="#products">Supplies</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
 
-      <div class="menu-small-screen">
-        <p class="small-menu-label">MENU</p>
+      <div class="menu-content menu-small-screen flex-row">
+        <p class="small-menu-label"><strong>MENU</strong></p>
         <div class="collapsing-menu collapsed">
           <nav>
             <ul class="flex-col">
+              <li><a href="#">Back to Top</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#supplies">Supplies</a></li>
+              <li><a href="#products">Supplies</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -65,36 +66,43 @@
         </div>
       </div>
 
-      <div>
-        <figure>
-          <img id="logo" alt="logo" />
-        </figure>
+      <div class="menu-content header-logo">
+        <a href="#">
+          <figure>
+            <img id="logo" alt="logo" src="/img/white-stm-logo.png" />
+          </figure>
+        </a>
       </div>
 
-      <div class="menu-lg-screen">
+      <div class="menu-content menu-lg-screen">
         <div class="header-contact">
           251-555-5555 | email@email.com
         </div>
 
-        <div class="header-social flex-row">
-          <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
-          <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
-          <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+        <div class="header-social">
+          <ul class="flex-row">
+            <li><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+
+          </ul>
+
         </div>
       </div>
 
-      <div class="menu-small-screen flex-row">
+      <div class="menu-content menu-small-screen flex-row contact-links">
         <p><a href="mailto:customerservice@stmsupply.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></p>
         <p><a href="tel:251-555-5555" target="_blank"><i class="fa-solid fa-phone"></i></a></p>
         <p class="mobile-search-icon"><i class="fa-solid fa-magnifying-glass"></i></p>
       </div>
 
+      <div class="mobile-search-bar menu-small-screen collapsed">
+        mobile search bar row
+      </div>
 
     </header>
 
-    <div class="mobile-search-bar menu-small-screen collapsed">
-      mobile search bar row
-    </div>
+
 
     <main class="flex-col">
       <section class="hero-area">
@@ -109,9 +117,9 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod temper indidunt ut labore et dolore magna aliqua.
           </p>
-          <input type="button" value="Meet the Team" class="btn meet-the-team" />
+          <button class="btn meet-the-team">Meet the Team &nbsp; &nbsp;<i class="fa-solid fa-caret-down icon-down"></i></button>
         </div>
-        
+
 
         <div id="staff" class="staff-box collapsed">
 
@@ -245,43 +253,36 @@
       </section>
 
       <section id="products">
-        <div class="best-sellers">
+        <div class="best-sellers flex-col">
           <h2>Best Sellers</h2>
           featured products carousel here
         </div>
-        
-        
+
+
         <div class="flex-col products-header">
-          <h2>Supplies</h2>
-          <div class="view-options">
-            img icon | list icon
-          </div>
+          <h2>
+            Supplies
+            <i class="fa-solid fa-images active-view" title="Image view"></i>
+            <i class="fa-solid fa-list-ul" title="List view"></i>
+          </h2>
         </div>
 
         <div class="flex-col products-box">
           <div class="product-cat">
-            <h4>Category Name</h4>
+            <h4>Category Name <i class="fa-solid fa-caret-down icon-down"></i></h4>
 
             <div class="product-gallery flex-col">
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
-                  <p>Product name</p>
-                </figure>
-              </div>
-
-
-              <div class="product">
-                <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -289,7 +290,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -297,7 +298,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -305,7 +306,15 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -315,28 +324,20 @@
           </div>
 
           <div class="product-cat">
-            <h4>Category Name</h4>
+            <h4>Category Name <i class="fa-solid fa-caret-down icon-down"></i></h4>
 
             <div class="product-gallery flex-col">
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
-                  <p>Product name</p>
-                </figure>
-              </div>
-
-
-              <div class="product">
-                <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -344,7 +345,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -352,7 +353,15 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -363,28 +372,20 @@
             </div>
           </div>
           <div class="product-cat">
-            <h4>Category Name</h4>
+            <h4>Category Name <i class="fa-solid fa-caret-down icon-down"></i></h4>
 
             <div class="product-gallery flex-col">
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
-                  <p>Product name</p>
-                </figure>
-              </div>
-
-
-              <div class="product">
-                <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -392,7 +393,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -400,7 +401,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -408,7 +409,15 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
+                  <p>Product name</p>
+                </figure>
+              </div>
+
+
+              <div class="product">
+                <figure>
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -417,7 +426,7 @@
             </div>
           </div>
           <div class="product-cat">
-            <h4>Category Name</h4>
+            <h4>Category Name <i class="fa-solid fa-caret-down icon-down"></i></h4>
 
             <div class="product-gallery flex-col">
 
@@ -425,7 +434,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -433,7 +442,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -441,7 +450,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -449,7 +458,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -458,13 +467,13 @@
             </div>
           </div>
           <div class="product-cat">
-            <h4>Category Name</h4>
+            <h4>Category Name <i class="fa-solid fa-caret-down icon-down"></i></h4>
 
             <div class="product-gallery flex-col">
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -472,7 +481,7 @@
 
               <div class="product">
                 <figure>
-                  <img alt="product img" />
+                  <img alt="product img" src="/img/st-aug-irrigation.jpeg" />
                   <p>Product name</p>
                 </figure>
               </div>
@@ -485,30 +494,61 @@
       </section>
 
       <section id="reviews">
-        <h2>Reviews</h2>
-        <div>Reviews carousel</div>
+        <div class="reviews-content flex-col">
+          <h2>Reviews</h2>
+          <div>Reviews carousel</div>
+        </div>
+
       </section>
 
       <section id="contact">
-        <h2>Contact us</h2>
+        <h2>Contact</h2>
         <div class="contact-box flex-col">
           <div class="physical-info">
-            <address>
-              address
-              address
-              phone
-            </address>
-
-            <div>map button</div>
-
             <div>
-              Hours
+              <strong>Come on by!</strong>
+              <address>
+                5471 Highway 43 Unit C & D <br />
+                Satsuma, AL 36572 <br />
+                (251) 586-8293
+              </address>
             </div>
 
-            <div>email button</div>
 
             <div>
-              Social links
+              <a href="https://www.google.com/maps/place/STM+Landscape+Supply+LLC./@30.8489053,-88.0598366,15z/data=!4m5!3m4!1s0x0:0x7cbb2228bbc1ec85!8m2!3d30.8489053!4d-88.0598366" target="_blank">
+                <div class="map-btn" title="See us on the map!"><i class="fa-solid fa-map-location-dot"></i></div>
+              </a>
+            </div>
+
+            <div class="hours">
+              <p>
+                <strong>Monday - Friday:</strong> 7:30AM–4:30PM <br />
+                <strong>Saturday: </strong> 7:30AM–12PM <br />
+                <strong>Sunday:</strong> Closed
+              </p>
+
+            </div>
+
+
+            <div class="email">
+              <strong>Questions?</strong> <br />
+              <a href="mailto:customerservice@stmsupply.com">
+                <div class="email-btn">
+                  customerservice@stmsupply.com
+                </div>
+              </a>
+
+            </div>
+
+            <div>
+              <strong>Follow us!</strong>
+              <div class="contact-social flex-row">
+                <p><a href="https://www.facebook.com/STMsupply" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+                <p><a href="https://www.instagram.com/stmsupply/" target="_blank"><i class="fa-brands fa-instagram"></i></a></p>
+                <!--<p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>-->
+              </div>
+
             </div>
 
           </div>
@@ -522,28 +562,48 @@
         <div class="help-links flex-col">
           <h3>Help Links</h3>
           <!--<div class="help-link">How to measure square footage</div>-->
-          <div class="help-link">Materials calculator </div>
-          <div class="help-link">Sod Diagram</div>
+          
+          <a  class="help-link" href="https://www.calconic.com/calculator-widgets/area-calculator/6202e85fa082bb002b9f882d?layouts=true" target="_blank">
+            Materials calculator
+          </a>
+          <a  class="help-link" href="/img/st-aug-irrigation.jpeg" target="_blank">
+            Which sod is best for you?
+          </a>
+          
         </div>
       </section>
 
+      
+
     </main>
 
-    <footer class="flex-col">
-      <div>
-        <h3>Subscribe!</h3>
-        <input type="text" />
+    <footer>
+      <div class="footer-content flex-col">
+        <div class="subscribe">
+          <h3>Subscribe!</h3>
+          <p>Join our mailing list and stay in the loop!</p>
+          <div class="flex-row">
+            <input type="email" placeholder="email@email.com" /> <button class="btn">Sign up</button>
+          </div>
+          
+          
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow us!</h3>
+
+          <div class="flex-row">
+            <p><a href="https://www.facebook.com/STMsupply" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+            <p><a href="https://www.instagram.com/stmsupply/" target="_blank"><i class="fa-brands fa-instagram"></i></a></p>
+          </div>
+
+        </div>
+
+        <div class="copyright">
+          Copyright &copy; 2022 STM Landscape Supply LLC - All Rights Reserved.
+        </div>
       </div>
 
-      <div class="footer-social flex-row">
-        <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
-        <p><a href="instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></p>
-        <!--<p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>-->
-      </div>
-
-      <div class="copyright">
-        Copyright &copy; 2022 STM Landscape Supply LLC - All Rights Reserved.
-      </div>
     </footer>
 
 
@@ -564,14 +624,38 @@
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
   <script>
+
+    //sticky header on scroll
+    const headerOffset = document.getElementsByTagName("header")[0];
+    const sticky = headerOffset.offsetTop;
+    window.addEventListener('scroll', (event) => {
+
+      if (window.pageYOffset > sticky) {
+        $("header").addClass("sticky");
+      } else {
+        $("header").removeClass("sticky");
+      }
+
+    });
+
     //collapsing mobile menu
     $(".small-menu-label").click(function () {
-      $(".collapsing-menu").toggleClass("collapsed");
+      $(".collapsing-menu").slideToggle();
+
+      //collapse search
+      $(".mobile-search-bar").slideUp();
+    })
+
+    //collapse mobile menu on menu item click
+    $(".collapsing-menu li").click(function () {
+      $(".collapsing-menu").slideUp();
     })
 
     //collapsing search bar
     $(".mobile-search-icon").click(function () {
       $(".mobile-search-bar").slideToggle();
+      //collapse mobile menu as well
+      $(".collapsing-menu").slideUp();
     })
 
     //collapsing staff
@@ -579,14 +663,42 @@
     //$("#staff").toggleClass("collapsed");
 
     $(".btn.meet-the-team").click(function () {
-      
+
+      $(this).find(".icon-down").toggleClass("rotate");
       $("#staff").slideToggle();
-      
+
     })
 
     //collapsing product-gallery
     $(".product-cat").click(function () {
       $(this).find(".product-gallery").slideToggle();
+      $(this).find(".icon-down").toggleClass("rotate");
+    })
+
+    //changing product view
+    $(".products-header i").click(function () {
+      $(".products-header i").removeClass("active-view");
+      $(this).addClass("active-view");
+
+      //if list view, hide all images and expand all categories
+      if ($(this).hasClass("fa-list-ul")) {
+        $(".product-gallery img").hide();
+
+        $(".product-gallery").slideDown();
+        $(".product-cat .icon-down").addClass("rotate");
+      } else {
+        //$(".product-gallery").slideUp();
+        $(".product-gallery img").show();
+        $(".product-cat").each(function () {
+          if ($(this).index() == 0) {
+            $(this).find(".product-gallery").slideDown();
+            $(this).find(".icon-down").addClass("rotate");
+          } else {
+            $(this).find(".product-gallery").slideUp();
+            $(this).find(".icon-down").removeClass("rotate");
+          }
+        })
+      }
     })
 
   </script>
