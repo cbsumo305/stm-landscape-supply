@@ -58,11 +58,14 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+
           <div class="header-social flex-row">
-            <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
-            <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
-            <p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+            <p><a href="https://www.facebook.com/STMsupply" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>
+            <p><a href="https://www.instagram.com/stmsupply/" target="_blank"><i class="fa-brands fa-instagram"></i></a></p>
+            <!--<p><a href="facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></p>-->
           </div>
+
+
         </div>
       </div>
 
@@ -110,7 +113,8 @@
         <p>Here are some things we'd like you to know about us.</p>
       </section>
 
-      <section id="about">
+      <section class="about">
+        <a id="about" class="nav-section"></a>
         <div class="about-content">
           <h2>About</h2>
           <p>
@@ -252,7 +256,7 @@
         <div class="bg-triangle"></div>
       </section>
 
-      <section id="products">
+      <section id="products" class="nav-section">
         <div class="best-sellers flex-col">
           <h2>Best Sellers</h2>
           featured products carousel here
@@ -501,7 +505,7 @@
 
       </section>
 
-      <section id="contact">
+      <section id="contact" class="nav-section">
         <h2>Contact</h2>
         <div class="contact-box flex-col">
           <div class="physical-info">
@@ -553,8 +557,20 @@
 
           </div>
 
-          <div class="quote-form">
-            Quote form here
+          <div class="quote-form flex-col">
+            <strong>Get a quote!</strong> <br />
+            <div class="flex-row">
+              <input type="text" />
+
+              <div class="info-box">
+                <i class="fa-solid fa-circle-question"></i>
+                <div class="info-blurb">
+                  Here's some more information about the thing you hovered over!
+                </div>
+              </div>
+              
+            </div>
+
           </div>
 
         </div>
@@ -562,18 +578,18 @@
         <div class="help-links flex-col">
           <h3>Help Links</h3>
           <!--<div class="help-link">How to measure square footage</div>-->
-          
-          <a  class="help-link" href="https://www.calconic.com/calculator-widgets/area-calculator/6202e85fa082bb002b9f882d?layouts=true" target="_blank">
+
+          <a class="help-link" href="https://www.calconic.com/calculator-widgets/area-calculator/6202e85fa082bb002b9f882d?layouts=true" target="_blank">
             Materials calculator
           </a>
-          <a  class="help-link" href="/img/st-aug-irrigation.jpeg" target="_blank">
+          <a class="help-link" href="/img/st-aug-irrigation.jpeg" target="_blank">
             Which sod is best for you?
           </a>
-          
+
         </div>
       </section>
 
-      
+
 
     </main>
 
@@ -585,8 +601,8 @@
           <div class="flex-row">
             <input type="email" placeholder="email@email.com" /> <button class="btn">Sign up</button>
           </div>
-          
-          
+
+
         </div>
 
         <div class="footer-social">
@@ -647,7 +663,7 @@
     })
 
     //collapse mobile menu on menu item click
-    $(".collapsing-menu li").click(function () {
+    $(".collapsing-menu li, .header-logo").click(function () {
       $(".collapsing-menu").slideUp();
     })
 
@@ -659,10 +675,7 @@
     })
 
     //collapsing staff
-    const teamCounter = -1;
-    //$("#staff").toggleClass("collapsed");
-
-    $(".btn.meet-the-team").click(function () {
+    $(".meet-the-team").click(function () {
 
       $(this).find(".icon-down").toggleClass("rotate");
       $("#staff").slideToggle();
