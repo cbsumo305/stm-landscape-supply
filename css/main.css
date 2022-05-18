@@ -274,7 +274,7 @@ html {
 body {
   color: #707070;
   font-family: 'Montserrat', sans-serif;
-  background-image: url(./img/st-aug-irrigation.jpeg);
+  background-image: url(../img/st-aug-irrigation.jpeg);
   background-size: contain;
   background-attachment: fixed;
 }
