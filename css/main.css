@@ -387,8 +387,8 @@ p {
 .nav-section:before {
   content: "";
   display: block;
-  height: 50px;  /*fixed header height*/
-  margin: -50px 0 0 0;  /*negative fixed header height */
+  height: 50px; /*fixed header height*/
+  margin: -50px 0 0 0; /*negative fixed header height */
   z-index: -1;
 }
 
@@ -409,6 +409,10 @@ header {
   z-index: 100;
 }
 
+nav {
+    font-weight: bold;
+}
+
 
 .menu-lg-screen {
   display: none;
@@ -427,7 +431,7 @@ header {
 }
 
 .small-menu-label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .collapsing-menu {
@@ -459,14 +463,13 @@ header {
     text-align: center;
   }
 
-  .collapsing-menu li a {
+    .collapsing-menu li a {
       display: block;
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
-
-  }
+    }
 
     .collapsing-menu li:hover {
       background-color: rgb(112 112 112 / 0.72);
@@ -494,7 +497,7 @@ header {
 }
 
 .header-logo {
-    cursor: pointer;
+  cursor: pointer;
   width: 40%;
   text-align: center;
   height: 90%;
@@ -535,34 +538,13 @@ main, section {
   padding: 75px 0;
   text-align: center;
   width: 100%;
-  box-shadow: 
+  box-shadow:
 }
 
   .hero-area p {
-    /*background: #E9E3D9;
-    width: 75%;
-    margin: auto;
-    padding: 25px 15px;*/
     font-weight: bold;
     position: relative;
-   
   }
-
-    /*.hero-area p::before {
-      background-color: #fff;
-      content: "";
-      margin: 0 auto;
-      position: absolute;
-      left: 3px;
-      top: 10px;
-      width: 90%;
-      height: 25px;
-      z-index: -1;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
-    }*/
-
-    
 
 /* MOBILE ABOUT */
 
@@ -571,12 +553,11 @@ main, section {
   background-color: white;
   text-align: center;
   height: 100%;
-  
 }
 
-.about h2 {
+  .about h2 {
     margin-top: 50px;
-}
+  }
 
 .about-content {
   position: relative;
@@ -588,12 +569,12 @@ main, section {
     margin: 15px;
   }
 
-  .meet-the-team {
-      box-shadow: rgb(112 112 112 / 0.72) 5px 5px 5px;
-  }
+.meet-the-team {
+  box-shadow: rgb(112 112 112 / 0.72) 5px 5px 5px;
+}
 
 
-  /* MOBILE BG-TRIANGLE */
+/* MOBILE BG-TRIANGLE */
 
 .about:before {
   content: '';
@@ -714,10 +695,6 @@ main, section {
   margin-top: 10px;
 }
 
-.product-gallery {
-  display: none;
-}
-
 .product {
   margin-top: 15px;
 }
@@ -750,7 +727,7 @@ main, section {
       width: auto;
     }
 
-/* REVIEWS */
+/* MOBILE REVIEWS */
 
 #reviews {
   background: white;
@@ -765,16 +742,17 @@ main, section {
 
 
 
-/* CONTACT */
+/* MOBILE CONTACT */
 
 #contact {
   background: white;
   width: 100%;
 }
 
-#contact h2 {
+  #contact h2 {
     margin-top: 50px;
-}
+  }
+
 
 .physical-info, .quote-form {
   box-sizing: border-box;
@@ -832,9 +810,9 @@ address {
     border-radius: 100%;
   }
 
-  .help-links {
-      margin-bottom: 50px;
-  }
+.help-links {
+  margin-bottom: 50px;
+}
 
 .help-link {
   background: #9DBD91;
@@ -844,23 +822,24 @@ address {
   font-weight: bold;
   color: white;
   text-align: center;
+  border-radius: 25px;
 }
 
 /* MOBILE MORE INFO ON HOVER */
 
 .info-box {
-    position: relative;
-    width: 30px;
-    cursor: pointer;
+  position: relative;
+  width: 30px;
+  cursor: pointer;
 }
 
-.info-box:hover .info-blurb {
+  .info-box:hover .info-blurb {
     display: block;
-}
+  }
 
-.info-box i {
+  .info-box i {
     font-size: 20px;
-}
+  }
 
 .info-blurb {
   display: none;
@@ -888,7 +867,7 @@ address {
     border-bottom: 10px solid #b4cdab;
   }
 
-/* FOOTER */
+/* MOBILE FOOTER */
 
 footer {
   background: #9DBD91;
@@ -923,13 +902,13 @@ footer {
 }
 
   .footer-social .flex-row {
-    width: 40%;
-    justify-content: space-evenly;
     margin: 10px auto 0 auto;
   }
 
   .footer-social p {
     font-size: 24px;
+    margin: 0 5px;
+    padding: 0;
   }
 
 .copyright {
@@ -942,6 +921,8 @@ footer {
 /* TABLET */
 @media only screen and (min-width: 768px) {
 
+  /*  TABLET GENERAL */
+
   html {
     font-size: 14px;
   }
@@ -950,6 +931,8 @@ footer {
     font-size: 1em;
   }
 
+
+
   /* TABLET HEADER */
 
   header, .sticky {
@@ -957,11 +940,20 @@ footer {
   }
 
 
+  /* This alone did not fix the scroll issue. I also had to add paddings/margins to match header height (which also doesn't work on its own, idk why) */
+  .nav-section:before {
+    height: 75px; /*fixed header height*/
+    margin: -75px 0 0 0; /*negative fixed header height */
+  }
 
   .menu-content {
     box-sizing: border-box;
-    width: 33%;
-    padding: 5px;
+    width: 40%;
+    padding: 5px 10px;
+  }
+
+  .menu-content.header-logo {
+      width: 20%;
   }
 
   .search-bar {
@@ -980,13 +972,30 @@ footer {
     justify-content: space-evenly;
   }
 
+  .menu-lg-screen nav a {
+      padding: 5px;
+      border-radius: 15px;
+  }
+
+  .menu-lg-screen nav a:hover {
+      background: #9DBD91;
+  }
+
   .menu-lg-screen .header-social {
     width: 50%;
     margin-left: 50%;
+    justify-content: flex-end;
   }
+
+  .menu-lg-screen .header-social p {
+      background: transparent;
+  }
+
 
   .header-contact {
     margin-bottom: 15px;
+    font-size: .75em;
+    text-align: right;
   }
 
   .menu-lg-screen {
@@ -1000,6 +1009,10 @@ footer {
 
   /* TABLET ABOUT */
 
+  .about h2 {
+    margin-top: 75px;
+  }
+
   .staff-bios {
     justify-content: space-evenly;
   }
@@ -1009,25 +1022,48 @@ footer {
     margin-bottom: 20px;
   }
 
-
-
-
-
-
-
-
   /* TABLET PRODUCTS */
+
+  .best-sellers {
+    padding: 75px 20px;
+  }
 
 
   .product-gallery {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .product {
     box-sizing: border-box;
+    width: 30%;
+  }
+
+  /* TABLET CONTACT */
+
+  #contact h2 {
+    margin-top: 75px;
+  }
+
+  .contact-box, .help-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .physical-info, .quote-form {
     width: 45%;
   }
+
+  /* TABLET FOOTER */
+
+  .footer-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .subscribe, .footer-social {
+      width: 50%;
+  }
+
 }
