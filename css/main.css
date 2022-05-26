@@ -821,8 +821,8 @@ main, section {
   box-sizing: border-box;
   background: rgba(157, 189, 145,.76);
   width: 100%;
-  padding: 50px 10%;
   text-align: center;
+  padding: 50px 25px 25px;
 }
 
   .reviews-content h2 {
@@ -889,6 +889,9 @@ address {
   margin-top: 10px;
 }
 
+.contact-map {
+    display: none;
+}
 
 .email {
   margin: 15px auto;
@@ -1044,9 +1047,7 @@ footer {
 
   /*  TABLET GENERAL */
 
-  html {
-    font-size: 14px;
-  }
+
 
   body {
     font-size: 1em;
@@ -1140,6 +1141,7 @@ footer {
 
   .staff-bios {
     justify-content: space-evenly;
+    align-items: flex-start;
   }
 
   .bio-box {
@@ -1171,6 +1173,12 @@ footer {
     width: 30%;
   }
 
+  /* TABLET REVIEWS */
+
+  .reviews-content {
+      padding: 75px 0 50px;
+  }
+
   /* TABLET CONTACT */
 
   #contact h2 {
@@ -1185,6 +1193,11 @@ footer {
 
   .physical-info, .quote-form {
     width: 45%;
+  }
+
+  .contact-map {
+      display: block;
+      margin: auto;
   }
 
   /* TABLET FOOTER */
