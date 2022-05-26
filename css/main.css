@@ -272,10 +272,11 @@ html {
 }
 
 body {
-  color: #707070;
+  /*  color: #707070;*/
+  color: #474747;
   font-family: 'Montserrat', sans-serif;
-  background-image: url(../img/st-aug-irrigation.jpeg);
-  background-size: contain;
+  background: url(../img/st-aug-irrigation.jpeg) no-repeat center;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -313,7 +314,8 @@ section {
 
 
 .btn {
-  background: #9DBD91;
+  /*background: #9DBD91;*/
+  background: #3F5535;
   border: none;
   color: white;
   font-weight: bold;
@@ -377,7 +379,8 @@ p {
   background: #E9E3D9;
   cursor: pointer;
   font-weight: bold;
-  padding: 10px;
+  font-size:.75em;
+  padding: 10px 20px;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -440,7 +443,8 @@ nav {
   top: 100%;
   left: 0;
   width: 200px;
-  color: #707070;
+  /*color: #707070;*/
+  color: #474747;
   z-index: 100;
 }
 
@@ -457,7 +461,8 @@ nav {
 
   .collapsing-menu li {
     margin: 0;
-    border-bottom: 1px groove #707070;
+    /*border-bottom: 1px groove #707070;*/
+    border-bottom: 1px groove #474747;
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -484,7 +489,8 @@ nav {
 }
 
   .header-social p {
-    background: #707070;
+    /*background: #707070;*/
+    background: #474747;
     width: 32px;
     height: 32px;
     border-radius: 100%;
@@ -507,6 +513,7 @@ nav {
     box-sizing: border-box;
     max-width: 95%;
     height: 100%;
+    margin: auto;
   }
 
 .contact-links {
@@ -538,13 +545,18 @@ main, section {
   padding: 75px 0;
   text-align: center;
   width: 100%;
-  box-shadow:
 }
 
   .hero-area p {
+      display: inline-block;
     font-weight: bold;
     position: relative;
+    font-style: italic;
+    margin: 15px auto;
+    font-size: 1em;
   }
+
+
 
 /* MOBILE ABOUT */
 
@@ -556,7 +568,8 @@ main, section {
 }
 
   .about h2 {
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    width: 80%;
   }
 
 .about-content {
@@ -658,7 +671,7 @@ main, section {
 
 .best-sellers {
   box-sizing: border-box;
-  background: rgba(157, 189, 145,.76);
+  background: linear-gradient(rgba(157, 189, 145,.76),white);
   width: 100%;
   padding: 50px 20px;
 }
@@ -670,7 +683,8 @@ main, section {
 
   .products-header i {
     cursor: pointer;
-    background: #9DBD91;
+    /*background: #9DBD91;*/
+    background: #3F5535;
     padding: 5px;
     border-radius: 100%;
     color: white;
@@ -679,7 +693,8 @@ main, section {
 
     .products-header i:not(.active-view) {
       background: white;
-      color: #9DBD91;
+      /*color: #9DBD91;*/
+      color: #3F5535;
     }
 
 .products-box {
@@ -695,8 +710,16 @@ main, section {
   margin-top: 10px;
 }
 
+.product-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .product {
   margin-top: 15px;
+  width: 100%;
 }
 
   .product h4 {
@@ -765,7 +788,8 @@ main, section {
 
   .physical-info .map-btn {
     display: inline-block;
-    background: #9DBD91;
+    /*background: #9DBD91;*/
+    background: #3F5535;
     color: white;
     padding: 5px;
     border-radius: 100%;
@@ -787,7 +811,8 @@ address {
 
 .email-btn {
   display: inline-block;
-  background: #9DBD91;
+  /*background: #9DBD91;*/
+  background: #3F5535;
   color: white;
   font-size: .8em;
   padding: 3px 5px;
@@ -800,12 +825,13 @@ address {
   justify-content: space-evenly;
   margin: 10px auto;
   font-size: 24px;
-  color: white;
+  /*color: #9DBD91;*/
+  color: #3F5535;
 }
 
   .contact-social p {
-    background: #9DBD91;
-    width: 32px;
+/*    background: #9DBD91;
+*/    width: 32px;
     height: 32px;
     border-radius: 100%;
   }
@@ -815,7 +841,8 @@ address {
 }
 
 .help-link {
-  background: #9DBD91;
+  /*background: #9DBD91;*/
+  background: #3F5535;
   width: 40%;
   padding: 10px;
   margin: 10px auto;
@@ -1030,6 +1057,7 @@ footer {
 
 
   .product-gallery {
+      flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
@@ -1065,5 +1093,65 @@ footer {
   .subscribe, .footer-social {
       width: 50%;
   }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    /* DESKTOP */
+
+    /* HEADER */
+    .header-contact {
+        font-size: 1em;
+    }
+
+    /* DESKTOP STAFF */
+    .bio-box {
+        width: 30%;
+    }
+
+    /* DESKTOP PRODUCTS */
+
+    .products-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .product-cat {
+        width: 40%;
+    }
+
+    .gallery-box {
+        display: initial;
+    }
+
+    /* DESKTOP CONTACT */
+
+    .physical-info {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: space-evenly;
+        padding: 25px 10px;
+    }
+
+    .physical-info h4 {
+        width: 100%;
+    }
+
+    .physical-info .address, .physical-info .email {
+        width: 50%;
+    }
+
+
+
+    .help-links {
+        width: 50%;
+        margin: 0 auto 25px auto;
+    }
 
 }
