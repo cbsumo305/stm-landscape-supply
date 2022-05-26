@@ -302,6 +302,7 @@ h3 {
 h1, h2, h3, h4 {
   margin: 0;
   text-align: center;
+  text-shadow: 0 0 10px #fff;
 }
 
 nav {
@@ -379,7 +380,7 @@ p {
   background: #E9E3D9;
   cursor: pointer;
   font-weight: bold;
-  font-size:.75em;
+  font-size: .75em;
   padding: 10px 20px;
   text-align: center;
   width: 100%;
@@ -413,7 +414,7 @@ header {
 }
 
 nav {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
@@ -548,7 +549,7 @@ main, section {
 }
 
   .hero-area p {
-      display: inline-block;
+    display: inline-block;
     font-weight: bold;
     position: relative;
     font-style: italic;
@@ -579,7 +580,8 @@ main, section {
 }
 
   .about-content p {
-    margin: 15px;
+      width: 80%;
+    margin: 15px auto;
   }
 
 .meet-the-team {
@@ -618,7 +620,7 @@ main, section {
   box-sizing: border-box;
   position: relative;
   padding: 5px;
-  width: 75%;
+  width: 80%;
   margin-bottom: 15px;
 }
 
@@ -629,21 +631,34 @@ main, section {
   justify-content: start;
 }
 
-.bio-box h3 {
-  font-family: 'Alfa Slab One';
-  font-size: 1em;
-  text-align: right;
+.bio-name {
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-.bio-box figure {
-  width: 150px;
-  height: 150px;
-  border: 1px solid;
-  margin-right: 10px;
-}
+  .bio-name h3 {
+    font-family: 'Alfa Slab One';
+    font-size: 1.5em;
+    text-align: right;
+  }
+
+  .bio-name h4 {
+      text-align: right;
+  }
+
+  .bio-box figure {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+    margin-bottom: 0;
+  }
+
+  .bio-box p {
+      margin: 15px 0;
+      text-align: justify;
+  }
 
 .bio-box .bio-text {
   width: 100%;
@@ -673,12 +688,54 @@ main, section {
   box-sizing: border-box;
   background: linear-gradient(rgba(157, 189, 145,.76),white);
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 25px 0 25px;
+  text-align: center;
+  margin-top: -.15px;
+}
+
+  .best-sellers h2 {
+    margin-bottom: 15px;
+  }
+
+.carousel-box {
+  width: 90%;
+  max-width: 1045px;
+  justify-content: space-between;
+  margin: 25px auto;
+}
+
+  .carousel-box div {
+    text-align: center;
+  }
+
+  .carousel-box .slide {
+    background: white;
+    box-shadow: rgb(112 112 112 / 0.72) 5px 5px 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+.big-slide {
+    display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+.little-slide {
+  display: none;
+}
+
+.slide-arrow {
+  width: 10%;
+  font-weight: bold;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 
+
 .products-header {
-  margin: 50px auto 25px auto;
+  margin: 25px auto;
 }
 
   .products-header i {
@@ -706,8 +763,11 @@ main, section {
   cursor: pointer;
   background: #E9E3D9;
   width: 80%;
-  padding: 15px;
   margin-top: 10px;
+}
+
+.product-cat h4 {
+    padding: 15px 0;
 }
 
 .product-gallery {
@@ -718,12 +778,12 @@ main, section {
 }
 
 .product {
-  margin-top: 15px;
+  margin: 15px 0;
   width: 100%;
 }
 
   .product h4 {
-    padding-bottom: 10px;
+    padding: 10px;
   }
 
   .product figure {
@@ -735,16 +795,17 @@ main, section {
     width: 80%;
     margin: auto;
     text-align: center;
+    font-size: .75em;
   }
 
-    .product figure p {
+    .product figure p:not(.product-deets) {
       font-weight: bold;
       text-transform: uppercase;
-      font-size: .75em;
     }
 
+
     .product figure img {
-      max-height: 150px;
+      max-height: 200px;
       max-width: 100%;
       height: auto;
       width: auto;
@@ -760,20 +821,26 @@ main, section {
   box-sizing: border-box;
   background: rgba(157, 189, 145,.76);
   width: 100%;
-  padding: 50px 20px;
+  padding: 50px 10%;
+  text-align: center;
 }
+
+  .reviews-content h2 {
+    margin-bottom: 25px;
+  }
 
 
 
 /* MOBILE CONTACT */
 
 #contact {
-  background: white;
+  background: transparent;
   width: 100%;
 }
 
   #contact h2 {
     margin-top: 50px;
+    
   }
 
 
@@ -784,6 +851,24 @@ main, section {
   padding: 15px;
   background: #E9E3D9;
   text-align: center;
+  border-radius: 15px;
+}
+
+.quote-form {
+    justify-content: space-evenly;
+    padding: 15px 25px 25px;
+}
+
+.quote-form .flex-row, .quote-form .flex-col {
+    margin-top: 15px;
+}
+
+.quote-form .flex-row input {
+    margin-left: 15px;
+}
+
+.quote-form .btn {
+    min-width: 100px;
 }
 
   .physical-info .map-btn {
@@ -830,14 +915,23 @@ address {
 }
 
   .contact-social p {
-/*    background: #9DBD91;
-*/    width: 32px;
+    /*    background: #9DBD91;
+*/ width: 32px;
     height: 32px;
     border-radius: 100%;
   }
 
+.help-links-box {
+    box-sizing: border-box;
+    background: #E9E3D9;
+    padding-top: 15px;
+    margin: 15px 15%;
+    border-radius: 15px;
+}
+
 .help-links {
   margin-bottom: 50px;
+  padding-bottom: 15px;
 }
 
 .help-link {
@@ -979,16 +1073,20 @@ footer {
     padding: 5px 10px;
   }
 
-  .menu-content.header-logo {
+    .menu-content.header-logo {
       width: 20%;
-  }
+    }
 
   .search-bar {
     width: 100%;
     height: 25px;
-    border: 1px solid;
     margin-bottom: 10px;
+    text-align: left;
   }
+
+    .search-bar input {
+      width: 65%;
+    }
 
 
   .menu-content ul {
@@ -996,17 +1094,17 @@ footer {
     list-style: none;
     margin: 0;
     padding: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .menu-lg-screen nav a {
-      padding: 5px;
-      border-radius: 15px;
+    padding: 5px;
+    border-radius: 15px;
   }
 
-  .menu-lg-screen nav a:hover {
+    .menu-lg-screen nav a:hover {
       background: #9DBD91;
-  }
+    }
 
   .menu-lg-screen .header-social {
     width: 50%;
@@ -1014,9 +1112,9 @@ footer {
     justify-content: flex-end;
   }
 
-  .menu-lg-screen .header-social p {
+    .menu-lg-screen .header-social p {
       background: transparent;
-  }
+    }
 
 
   .header-contact {
@@ -1052,12 +1150,18 @@ footer {
   /* TABLET PRODUCTS */
 
   .best-sellers {
-    padding: 75px 20px;
+    padding: 75px 20px 25px 20px;
+  }
+
+  .little-slide {
+    display: flex;
+    width: 125px;
+    height: 125px;
   }
 
 
   .product-gallery {
-      flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
@@ -1086,72 +1190,80 @@ footer {
   /* TABLET FOOTER */
 
   .footer-content {
-      flex-direction: row;
-      flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .subscribe, .footer-social {
-      width: 50%;
+    width: 50%;
   }
-
 }
 
 @media only screen and (min-width: 1200px) {
-    /* DESKTOP */
+  /* DESKTOP */
 
-    /* HEADER */
-    .header-contact {
-        font-size: 1em;
+  /* HEADER */
+  .header-contact {
+    font-size: 1em;
+  }
+
+  /* DESKTOP STAFF */
+  .bio-box {
+    width: 30%;
+  }
+
+  /* DESKTOP PRODUCTS */
+
+  .products-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .product-cat {
+    width: 40%;
+  }
+
+    .product-cat h4 i {
+      display: none;
     }
 
-    /* DESKTOP STAFF */
-    .bio-box {
-        width: 30%;
-    }
+  .gallery-box, .gallery-box.collapsed {
+    display: initial;
+  }
 
-    /* DESKTOP PRODUCTS */
+ 
 
-    .products-box {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
-    }
+  /* DESKTOP CONTACT */
 
-    .product-cat {
-        width: 40%;
-    }
+  .physical-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-evenly;
+    padding: 25px 10px;
+  }
 
-    .gallery-box {
-        display: initial;
-    }
-
-    /* DESKTOP CONTACT */
-
-    .physical-info {
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: space-evenly;
-        padding: 25px 10px;
-    }
-
-    .physical-info h4 {
-        width: 100%;
+    .physical-info h3 {
+      width: 100%;
     }
 
     .physical-info .address, .physical-info .email {
-        width: 50%;
+      width: 50%;
     }
 
-
-
-    .help-links {
-        width: 50%;
-        margin: 0 auto 25px auto;
+    .contact-map {
+        margin-top: 15px;
+        display: block;
+        width: 100%;
+        height: 400px;
     }
 
+  .help-links {
+    width: 50%;
+    margin: 0 auto 25px auto;
+  }
 }
