@@ -1043,7 +1043,9 @@ footer {
 }
 
 /* TABLET */
-@media only screen and (min-width: 768px) {
+
+/* I chose to do this instead of 768, because of the text wrapping in .header-contact */
+@media only screen and (min-width: 850px) { 
 
   /*  TABLET GENERAL */
 
