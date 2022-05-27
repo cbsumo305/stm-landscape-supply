@@ -1237,16 +1237,16 @@ footer {
   }
 
   .product-cat {
-    width: 40%;
+    /*width: 40%;*/
   }
 
-    .product-cat h4 i {
+/*    .product-cat h4 i {
       display: none;
     }
 
   .gallery-box, .gallery-box.collapsed {
     display: initial;
-  }
+  }*/
 
  
 
