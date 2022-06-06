@@ -385,31 +385,38 @@ p {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 100;
 }
 
 /* MOBILE HEADER */
+video {
+    display: none;
+}
+
 .nav-section:before {
   content: "";
   display: block;
-  height: 50px; /*fixed header height*/
-  margin: -50px 0 0 0; /*negative fixed header height */
+  height: 75px; /*fixed header height*/
+  margin: -75px 0 0 0; /*negative fixed header height */
   z-index: -1;
 }
 
 header {
   position: relative;
   box-sizing: border-box;
+  background-color: rgb(112 112 112 / 0.72);
   color: white;
   justify-content: space-between;
   width: 100%;
-  height: 50px;
+  height: 75px;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(112 112 112 / 0.72);
+  /*background-color: rgb(112 112 112 / 0.72);*/
   z-index: 100;
 }
 
@@ -427,12 +434,15 @@ nav {
 }
 
 .menu-content {
+    
   position: relative;
   text-align: center;
   box-sizing: border-box;
   width: 30%;
   height: 100%;
 }
+
+
 
 .small-menu-label {
   cursor: pointer;
@@ -538,14 +548,13 @@ main, section {
 /* MOBILE HERO AREA */
 
 .hero-area {
-  /*bg color hex code = #E9E3D9*/
-  /*  background-color: rgba(233, 227, 217, .8);
-*/
+    padding: 75px 0;
+  box-sizing: border-box;
   position: relative;
   background-color: rgba(255,255,255,.6);
-  padding: 75px 0;
   text-align: center;
   width: 100%;
+  height: 50vh;
 }
 
   .hero-area p {
@@ -554,7 +563,8 @@ main, section {
     position: relative;
     font-style: italic;
     margin: 15px auto;
-    font-size: 1em;
+    font-size: 1.5em;
+    text-shadow: 0 0 15px #fff;
   }
 
 
@@ -566,10 +576,11 @@ main, section {
   background-color: white;
   text-align: center;
   height: 100%;
+  padding-top: 150px;
 }
 
   .about h2 {
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
     width: 80%;
   }
 
@@ -591,7 +602,7 @@ main, section {
 
 /* MOBILE BG-TRIANGLE */
 
-.about:before {
+.about:after {
   content: '';
   position: absolute;
   display: block;
@@ -626,7 +637,7 @@ main, section {
 
 .front-bio {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   flex-wrap: wrap;
   justify-content: start;
 }
@@ -657,7 +668,7 @@ main, section {
 
   .bio-box p {
       margin: 15px 0;
-      text-align: justify;
+      text-align: left;
   }
 
 .bio-box .bio-text {
@@ -671,7 +682,7 @@ main, section {
   background-color: #E9E3D9;
   width: 90%;
   height: 95%;
-  z-index: 0;
+  z-index: 1;
   box-shadow: rgb(112 112 112 / 0.4) 5px 5px 5px;
 }
 
@@ -688,7 +699,7 @@ main, section {
   box-sizing: border-box;
   background: linear-gradient(rgba(157, 189, 145,.76),white);
   width: 100%;
-  padding: 50px 25px 0 25px;
+  padding: 75px 25px 0 25px;
   text-align: center;
   margin-top: -.15px;
 }
@@ -756,6 +767,8 @@ main, section {
 
 .products-box {
   margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .product-cat {
@@ -822,7 +835,7 @@ main, section {
   background: rgba(157, 189, 145,.76);
   width: 100%;
   text-align: center;
-  padding: 50px 25px 25px;
+  padding: 75px 25px 25px;
 }
 
   .reviews-content h2 {
@@ -836,12 +849,8 @@ main, section {
 #contact {
   background: transparent;
   width: 100%;
+  padding-top: 75px;
 }
-
-  #contact h2 {
-    margin-top: 50px;
-    
-  }
 
 
 .physical-info, .quote-form {
@@ -1045,7 +1054,7 @@ footer {
 /* TABLET */
 
 /* I chose to do this instead of 768, because of the text wrapping in .header-contact */
-@media only screen and (min-width: 850px) { 
+@media only screen and (min-width: 850px) {
 
   /*  TABLET GENERAL */
 
@@ -1053,21 +1062,31 @@ footer {
 
   body {
     font-size: 1em;
+    background: none;
   }
+
 
 
 
   /* TABLET HEADER */
 
-  header, .sticky {
-    height: 75px;
+  video {
+      display: initial;
+    object-fit: cover;
+    width: 100vw;
+    height: 75vh;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
+  header, .sticky {
+    height: 100px;
+  }
 
-  /* This alone did not fix the scroll issue. I also had to add paddings/margins to match header height (which also doesn't work on its own, idk why) */
   .nav-section:before {
-    height: 75px; /*fixed header height*/
-    margin: -75px 0 0 0; /*negative fixed header height */
+    height: 100px; /*fixed header height*/
+    margin: -100px 0 0 0; /*negative fixed header height */
   }
 
   .menu-content {
@@ -1100,6 +1119,12 @@ footer {
     justify-content: space-between;
   }
 
+  .menu-lg-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
   .menu-lg-screen nav a {
     padding: 5px;
     border-radius: 15px;
@@ -1126,12 +1151,14 @@ footer {
     text-align: right;
   }
 
-  .menu-lg-screen {
-    display: initial;
-  }
-
   .menu-small-screen {
     display: none;
+  }
+
+  /* TABLET HERO */
+  .hero-area {
+    padding: 0;
+    background-color: rgba(157, 189, 145,.3);
   }
 
 
@@ -1154,7 +1181,7 @@ footer {
   /* TABLET PRODUCTS */
 
   .best-sellers {
-    padding: 75px 20px 25px 20px;
+    padding: 100px 20px 25px 20px;
   }
 
   .little-slide {
@@ -1178,13 +1205,13 @@ footer {
   /* TABLET REVIEWS */
 
   .reviews-content {
-      padding: 75px 0 50px;
+      padding: 100px 0 50px;
   }
 
   /* TABLET CONTACT */
 
   #contact h2 {
-    margin-top: 75px;
+    margin-top: 100px;
   }
 
   .contact-box, .help-links {
