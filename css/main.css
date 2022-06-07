@@ -302,7 +302,7 @@ h3 {
 h1, h2, h3, h4 {
   margin: 0;
   text-align: center;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 15px #fff;
 }
 
 nav {
@@ -548,7 +548,7 @@ main, section {
 /* MOBILE HERO AREA */
 
 .hero-area {
-    padding: 75px 0;
+    padding: 75px 25px;
   box-sizing: border-box;
   position: relative;
   background-color: rgba(255,255,255,.6);
@@ -1062,7 +1062,7 @@ footer {
 
   body {
     font-size: 1em;
-    background: none;
+    background: #9DBD91;
   }
 
 
